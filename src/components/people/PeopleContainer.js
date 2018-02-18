@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Table} from "react-bootstrap";
 import PersonAPI from "../../services/personService";
 import People from './People';
+import AddPerson from './AddPerson';
 
 let api = new PersonAPI();
 
@@ -11,9 +12,7 @@ class PeopleContainer extends React.Component {
         super(props);
 
         this.state = {
-            people: [],
-            newName: '',
-            newOccupation: ''
+            people: []
         };
     }
 
@@ -31,33 +30,17 @@ class PeopleContainer extends React.Component {
             <div>
                 <People people={this.state.people}
                         deletePerson={this.onDeletePerson} />
-                <div>
-                    <input onChange={this.onNameChange}
-                           className='inpt'
-                           placeholder={'Name'}
-                           value={this.state.newName}/>
-                    {' '}
-                    <input onChange={this.onOccupationChange}
-                           placeholder={'Occupation'}
-                           value={this.state.newOccupation}/>
-                    {' '}
-                    <Button onClick={this.onAddNewPerson}>Add</Button>
-                </div>
+                <AddPerson addPerson={this.onAddNewPerson} />
             </div>
         );
     };
 
-    onAddNewPerson = () => {
-
-        if (this.state.newName === '' ||
-            this.state.newOccupation === '') {
-            return;
-        }
+    onAddNewPerson = (name, occupation) => {
 
         const person = {
             id: this.getId(),
-            name: this.state.newName,
-            occupation: this.state.newOccupation
+            name: name,
+            occupation: occupation
         };
 
         this.setState({
@@ -68,21 +51,7 @@ class PeopleContainer extends React.Component {
 
     };
 
-    onOccupationChange = (e) => {
-        this.setState({
-            newOccupation: e.target.value
-        });
-    };
-
-    onNameChange = (e) => {
-        this.setState({
-            newName: e.target.value
-        });
-    };
-
     onDeletePerson = (id) => {
-
-        console.log(id);
 
         let people = this.state.people.filter(person => (id !== person.id));
 
