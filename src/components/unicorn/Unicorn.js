@@ -9,7 +9,6 @@ const Unicorn = ({match, location}) => {
     if (direction === undefined)
         direction = 'left';
 
-
     return (
         <div>
             <h1>Unicorn Love</h1>

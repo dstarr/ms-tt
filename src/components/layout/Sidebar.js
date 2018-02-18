@@ -6,7 +6,8 @@ const Sidebar = () => {
 
     const links = [
         {name: 'Home', url: '/'},
-        {name: 'Transitions', url: '/transitions'},
+        {name: 'People', url: '/people'},
+        //{name: 'Transitions', url: '/transitions'},
         {name: '404 Error', url: '/404Error'},
     ];
 
@@ -19,17 +20,24 @@ const Sidebar = () => {
         );
     });
 
+    const unicornStyle = {
+        width: 60,
+        textAlign: 'center'
+    };
+
     return (
         <div className={'leftNavContainer'}>
             <ul>
                 {linksComponents}
             </ul>
             <Link to='/unicorn'>
-                <Image src='/assets/unicorn.png' width={100}/>
+                <Image src='/assets/unicorn.png' style={unicornStyle}/>
             </Link>
-
         </div>
     );
+
+
+
 };
 
 export default Sidebar;

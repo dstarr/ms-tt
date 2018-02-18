@@ -8,15 +8,11 @@ const PageNotFound = (props) => {
         fontWeight: 'bold'
     };
 
-    let message = 'Page not found';
-    if(props.text)
-        message = props.text;
-
     return (
-        <div style={{textAlign:'center', width:300}}>
-            <h1>{message}</h1>
+        <div style={{textAlign:'center' }}>
+            <h1>Page not found</h1>
             <div style={style404}>404</div>
-            <img src={'/assets/Black_Hole_Orange.png'} />
+            <img src={'/assets/404lost.jpg'} />
         </div>
     );
 };
