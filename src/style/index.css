@@ -19,7 +19,7 @@ a, a:active, a:visited, a:hover {
     padding: 20px;
     position: absolute;
     width: 180px;
-    background-color: #F15B2A;
+    background-color: #2F77CE;
     display: block;
     height: 100%;
 }
@@ -63,7 +63,7 @@ li.nav {
 }
 
 .unicorn {
-    padding-left: 0px;
+    padding-left: 0;
     margin-left: 12px;
     width: 80px;
     margin-top: 20px;
