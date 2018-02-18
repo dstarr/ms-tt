@@ -5,7 +5,7 @@ import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Unicorn from './components/unicorn/Unicorn';
-import People from './components/people/People';
+import PeopleContainer from './components/people/PeopleContainer';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact/>
-                        <Route path='/people' component={People} />
+                        <Route path='/people' component={PeopleContainer} />
                         <Route path={'/unicorn'} component={Unicorn}/>
                         <Route component={PageNotFound}/>
                     </Switch>
