@@ -18,8 +18,6 @@ const App = () => {
                 <Sidebar/>
                 <div className={'rightContentContainer'}>
 
-                    <Hello message='Hello React Params' />
-
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path={'/unicorn'} component={Unicorn}/>
