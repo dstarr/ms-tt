@@ -1,8 +1,6 @@
 import React from 'react';
-import {Button, Table} from "react-bootstrap";
-import PersonAPI from "../../services/personService";
+import PersonAPI from '../../services/personService';
 import People from './People';
-import AddPerson from './AddPerson';
 
 let api = new PersonAPI();
 
@@ -29,10 +27,9 @@ class PeopleContainer extends React.Component {
         return (
             <div>
                 <People people={this.state.people}
-                        deletePerson={this.onDeletePerson} />
-                <AddPerson addPerson={this.onAddNewPerson} />
+                        deletePerson={this.onDeletePerson}/>
             </div>
-        );
+        )
     };
 
     onAddNewPerson = (name, occupation) => {

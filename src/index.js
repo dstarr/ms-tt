@@ -9,5 +9,5 @@ import App from './App'
 const node1 = document.getElementById('app');
 
 if (node1) {
-    ReactDOM.render(<App />, node1);
+    ReactDOM.render(<h1>Hello React</h1>, node1);
 }

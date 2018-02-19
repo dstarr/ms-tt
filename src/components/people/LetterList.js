@@ -17,7 +17,7 @@ const LetterList = (props) => {
         if (!letters.includes(letter)) {
             letters.push(letter);
 
-            const linkUri = `${props.match.url}/languages/${letter}?name=${props.name}&occupation=${props.occupation}`;
+            const linkUri = `${props.match.url}/languages/${letter}`;
 
             return (<span style={spanStyle} key={index}>
                         <Link to={linkUri}>{letter}</Link>
@@ -34,9 +34,7 @@ const LetterList = (props) => {
 };
 
 LetterList.propTypes = {
-    languages: PropTypes.array.isRequired,
-    name: PropTypes.string.isRequired,
-    occupation: PropTypes.string.isRequired
+    languages: PropTypes.array.isRequired
 };
 
 export default withRouter(LetterList);

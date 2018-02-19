@@ -12,7 +12,7 @@ class PersonProfileContainer extends React.Component {
         };
     }
 
-    componentDidMount = () => {
+    componentWillMount = () => {
 
         request
             .get('/assets/languageData.json')
