@@ -7,8 +7,7 @@ const Sidebar = () => {
     const links = [
         {name: 'Home', url: '/'},
         {name: 'People', url: '/people'},
-        //{name: 'Transitions', url: '/transitions'},
-        {name: '404 Error', url: '/404Error'},
+        {name: '404 Error', url: '/404Error'}
     ];
 
     let linksComponents = links.map((link, index) => {

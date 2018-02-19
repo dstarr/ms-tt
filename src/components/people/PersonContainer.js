@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent'
-import PersonProfile from "./Person";
+import Person from "./Person";
 
 class PersonProfileContainer extends React.Component {
 
@@ -34,7 +34,7 @@ class PersonProfileContainer extends React.Component {
 
         return (
             <section>
-                <PersonProfile languages={this.state.languages}/>
+                <Person languages={this.state.languages}/>
             </section>
         );
     }
