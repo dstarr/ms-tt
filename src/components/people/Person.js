@@ -7,9 +7,9 @@ import LetterList from './LetterList';
 
 const PersonProfile = (props) => {
 
-    const qsValues = querystring.parse(props.location.search);
-    const name = qsValues.name;
-    const occupation = qsValues.occupation;
+    const {name} = props.match.params;
+    const {occupation} = props.match.params;
+
 
     return (
         <div>

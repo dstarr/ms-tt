@@ -6,6 +6,7 @@ import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Unicorn from './components/unicorn/Unicorn';
 import PeopleContainer from './components/people/PeopleContainer';
+import PersonContainer from './components/people/PersonContainer';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact/>
+                        <Route path='/people/:id/:name/:occupation' component={PersonContainer} />
                         <Route path='/people' component={PeopleContainer} />
                         <Route path={'/unicorn'} component={Unicorn}/>
                         <Route component={PageNotFound}/>
