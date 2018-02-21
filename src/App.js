@@ -4,10 +4,9 @@ import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
-import Unicorn from './components/unicorn/Unicorn';
 import PeopleContainer from './components/people/PeopleContainer';
 import PersonContainer from './components/people/PersonContainer';
-import Hello from './Hello';
+import Unicorn2 from './components/unicorn/Unicorn2';
 
 const App = () => {
 
@@ -20,7 +19,7 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact/>
-                        <Route path={'/unicorn'} component={Unicorn}/>
+                        <Route path={'/unicorn'} component={Unicorn2}/>
 
                         <Route path='/people/:id/:name/:occupation' component={PersonContainer}/>
                         <Route path='/people' component={PeopleContainer}/>
