@@ -26,12 +26,7 @@ class Unicorn2 extends React.Component {
 
     onHandleButtonClick = () => {
 
-        let direction;
-        if(this.state.direction === 'left')
-            direction = 'right';
-        else
-            direction = 'left';
-
+        let direction = this.state.direction === 'left' ? 'right' : 'left';
 
         this.setState({
             direction
